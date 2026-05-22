@@ -1,15 +1,25 @@
-import { NAP_DATA } from "../data";
+import { NAP_DATA, IMAGES } from "../data";
 
 export default function StructuredData() {
+  const origin = typeof window !== "undefined" ? window.location.origin : "";
+  const pathname = typeof window !== "undefined" ? window.location.pathname.replace(/\/$/, "") : "";
+  const basePageUrl = `${origin}${pathname}`;
+
+  // Helper to convert relative asset paths to absolute URLs dynamic for search crawlers
+  const resolveAbsoluteUrl = (relPath: string) => {
+    if (!relPath) return "";
+    const cleanPath = relPath.replace(/^\.\//, "");
+    return `${basePageUrl}/${cleanPath}`;
+  };
+
   const schema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Antonio Turismo | City Tour, Passeios e Transfer em Gramado e Canela",
     "legalName": "Antonio Turismo",
-    "image": "https://ais-dev-kmlyequph6apcu45paszeh-186713379987.us-east1.run.app/src/assets/images/brand_logo_1779403377598.png",
-    "logo": "https://ais-dev-kmlyequph6apcu45paszeh-186713379987.us-east1.run.app/src/assets/images/brand_logo_1779403377598.png",
-    "@id": "https://ais-dev-kmlyequph6apcu45paszeh-186713379987.us-east1.run.app/#antonio-turismo",
-    "url": "https://ais-dev-kmlyequph6apcu45paszeh-186713379987.us-east1.run.app",
+    "image": resolveAbsoluteUrl(IMAGES.logo),
+    "@id": `${basePageUrl}/#antonio-turismo`,
+    "url": basePageUrl,
     "telephone": "+5554981544043",
     "priceRange": "$$$",
     "address": {

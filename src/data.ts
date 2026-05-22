@@ -2,10 +2,10 @@ import { TourItem, RouteItem, ReviewItem } from "./types";
 
 // Static premium images generated for the business
 export const IMAGES = {
-  hero: "/src/assets/images/hero_serra_gaucha_1779401783409.png",
-  mariaFumaca: "/src/assets/images/maria_fumaca_tour_1779401800988.png",
-  transferCar: "/src/assets/images/executive_transfer_car_1779401821221.png",
-  logo: "/src/assets/images/brand_logo_1779403377598.png",
+  hero: "./src/assets/images/hero_serra_gaucha_1779401783409.png",
+  mariaFumaca: "./src/assets/images/maria_fumaca_tour_1779401800988.png",
+  transferCar: "./src/assets/images/executive_transfer_car_1779401821221.png",
+  logo: "./src/assets/images/brand_logo_v2_1779409432248.png",
 };
 
 // Exact NAP values (Name, Address, Phone)

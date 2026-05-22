@@ -38,23 +38,20 @@ export default function Header() {
             <a
               id="header-brand-link"
               href="#"
-              className="flex items-center gap-3 group focus:outline-none"
+              className="flex items-center gap-4 group focus:outline-none"
             >
-              <div className="relative">
+              <div className="relative flex items-center justify-center shrink-0">
+                <div className="absolute -inset-1.5 bg-gradient-to-tr from-gold via-yellow-400 to-champagne rounded-full opacity-50 blur-[2px] group-hover:opacity-100 transition-opacity pointer-events-none"></div>
                 <img
                   src={IMAGES.logo}
                   alt="Logo Antonio Turismo"
-                  className="w-12 h-12 object-contain rounded-full border border-gold/40 shadow-md group-hover:scale-105 transition-transform"
+                  className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 aspect-square object-contain rounded-full shadow-2xl border border-gold/50 shadow-gold/20 group-hover:scale-105 transition-all duration-300 z-10"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute -inset-0.5 bg-gold rounded-full blur opacity-20 group-hover:opacity-40 transition-opacity pointer-events-none"></div>
               </div>
-              <div>
-                <span className="block font-serif text-lg sm:text-2xl font-bold tracking-tight text-white group-hover:text-gold transition-colors">
+              <div className="flex flex-col">
+                <span className="block font-serif text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-white group-hover:text-gold transition-colors">
                   Antonio Turismo
-                </span>
-                <span className="block text-[10px] tracking-widest uppercase font-mono text-gray-300">
-                  Valores VIP na Serra Gaúcha
                 </span>
               </div>
             </a>
